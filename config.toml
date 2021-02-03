@@ -1,0 +1,7 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Harry"
+theme = "tale"
+
+[outputs]
+    home = ["HTML","JSON"]

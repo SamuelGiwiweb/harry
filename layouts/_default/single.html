@@ -1,0 +1,42 @@
+{{ define "main" }}
+
+<main>
+    
+
+    <!-- {{ range getJSON "https://jsonplaceholder.typicode.com/photos?_limit=5" }}
+    <br>
+    <h3>{{ .title | humanize }}</h3>
+	<img style="float:left;" src="{{ .thumbnailUrl }}" alt="{{ .title }}"><br>
+	{{ end }}
+	<hr> -->
+
+	
+    <hr>
+	<div class="post">
+        {{ .Site.BaseURL }}
+        <br><hr>
+		{{ partial "single/post-info.html" . }}
+		{{ partial "single/title.html" . }}
+
+		{{ partial "single/header.html" . }}
+
+		{{ .Content }}
+
+		{{ partial "contact.html" }}
+
+		{{ partial "single/footer.html" . }}
+	</div>
+<h2>depuis mon layout</h2>
+	<div class="pagination">
+		{{- if .PrevPage }}
+		<a href="{{ .PrevPage.RelPermalink }}" class="left arrow">&#8592;</a>
+		{{- end }}
+		{{- if .NextPage }}
+		<a href="{{ .NextPage.RelPermalink }}" class="right arrow">&#8594;</a>
+		{{- end }}
+
+		<a href="#" class="top">Top</a>
+	</div>
+</main>
+
+{{ end }}
