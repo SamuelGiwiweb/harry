@@ -19,18 +19,103 @@
 	</head>
 
     <body>
-        		<nav class="nav">
-			<div class="nav-container">
-				<a href="/">
-					<h2 class="nav-title">Harry</h2>
-				</a>
-				<ul>
-    
-    
-</ul>
-			</div>
-		</nav>
+        <nav class="nav">
+    <div class="nav-container">
+        <a href="/">
+            <h2 class="nav-title">Harry</h2>
+        </a>
+        <style>
+    .nav {
+        overflow: visible;
+        padding: .1rem;
+    }
 
+    #search {
+        float: right;
+        position: relative;
+        bottom: .2rem;
+        padding: .5rem 1rem;
+        width: 15rem;
+        border: 1px solid lightgray;
+    }
+
+    #search-result {
+        position: absolute;
+        background-color: white;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.35);
+        right: 0;
+    }
+
+    #search-result a {
+        display: block;
+        border-bottom: 1px solid lightgray;
+        width: 12rem;
+        padding: .5rem;
+    }
+
+    #search-result.hide {
+        display: none;
+    }
+</style>
+
+<input type="text" id="search" placeholder="Search">
+<div id="search-result" class="hide">
+    <a href="">result 1</a>
+    <a href="">result 2</a>
+    <a href="">result 3</a>
+</div>
+
+
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+<script>
+    const search = document.getElementById('search')
+    const results = document.getElementById('search-result')
+    console.log(results)
+
+    search.addEventListener('focus', e => {
+        results.classList.remove('hide')
+    })
+    search.addEventListener('blur', e => {
+        setTimeout(() => {
+            results.classList.add('hide')
+        }, 100)
+    })
+
+    var documents = [{
+        "name": "Lunr",
+        "text": "Like Solr, but much smaller, and not as bright."
+    }, {
+        "name": "React",
+        "text": "A JavaScript library for building user interfaces."
+    }, {
+        "name": "Lodash",
+        "text": "A modern JavaScript utility library delivering modularity, performance & extras."
+    }]
+
+    var idx = lunr(function () {
+        this.ref('name')
+        this.field('text')
+
+        documents.forEach(function (doc) {
+            this.add(doc)
+        }, this)
+    })
+
+    search.addEventListener('keyup', function(){
+        results.innerHTML = ''
+        if(!this.value) return
+
+        let lunrResults = window.idx.search(this.value)
+
+        lunrResults.forEach(result =>{
+            let resultNode = document.createElement('a')
+            resultNode.innerText = result.ref
+            results.appendChild(resultNode)
+        })
+    })
+</script>
+    </div>
+</nav>
         
 <main>
     <h1>Tags</h1>
@@ -46,7 +131,7 @@
         		<footer>
 			
 			<span>
-			&copy; <time datetime="2021-02-02 13:16:28.5068549 &#43;0100 CET m=&#43;0.105015001">2021</time> . Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
+			&copy; <time datetime="2021-02-03 11:20:01.3105073 &#43;0100 CET m=&#43;0.141253101">2021</time> . Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
 			</span>
 		</footer>
 

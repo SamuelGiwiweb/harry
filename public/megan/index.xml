@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Megans on Harry</title>
+    <link>http://example.org/megan/</link>
+    <description>Recent content in Megans on Harry</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 02 Feb 2021 13:32:20 +0100</lastBuildDate>
+    
+	<atom:link href="http://example.org/megan/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fourth Page</title>
+      <link>http://example.org/megan/fourth-page/</link>
+      <pubDate>Tue, 02 Feb 2021 13:32:20 +0100</pubDate>
+      
+      <guid>http://example.org/megan/fourth-page/</guid>
+      <description>hy, i&amp;rsquo;m meg </description>
+    </item>
+    
+    <item>
+      <title>Second Page</title>
+      <link>http://example.org/megan/second-page/</link>
+      <pubDate>Tue, 02 Feb 2021 13:25:33 +0100</pubDate>
+      
+      <guid>http://example.org/megan/second-page/</guid>
+      <description>je suis juste dans la page </description>
+    </item>
+    
+  </channel>
+</rss>

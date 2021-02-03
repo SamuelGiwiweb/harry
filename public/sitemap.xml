@@ -3,11 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>http://example.org/premium/connect/</loc>
+    <lastmod>2021-02-03T10:51:24+01:00</lastmod>
   </url>
   
   <url>
     <loc>http://example.org/</loc>
+    <lastmod>2021-02-03T10:51:24+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/premium/</loc>
+    <lastmod>2021-02-03T10:51:24+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/megan/fourth-page/</loc>
+    <lastmod>2021-02-02T13:32:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/megan/</loc>
+    <lastmod>2021-02-02T13:32:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/page-three/</loc>
+    <lastmod>2021-02-02T13:27:05+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/megan/second-page/</loc>
+    <lastmod>2021-02-02T13:25:33+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/first-page/</loc>
+    <lastmod>2021-02-02T13:17:28+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/categories/</loc>
   </url>
   
   <url>
